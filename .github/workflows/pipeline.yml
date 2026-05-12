@@ -69,7 +69,7 @@ jobs:
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
          #heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-         #heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-         #heroku_email: ${{secrets.HEROKU_USER_EMAIL}}
-          service-id: ${{ secrets.RENDER_SERVICE_ID }}
-          api-key: ${{ secrets.RENDER_API_KEY }}      
+         heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+         heroku_email: ${{secrets.HEROKU_USER_EMAIL}}
+         service-id: ${{ secrets.RENDER_SERVICE_ID }}
+         api-key: ${{ secrets.RENDER_API_KEY }}      

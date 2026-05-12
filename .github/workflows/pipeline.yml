@@ -65,14 +65,11 @@ jobs:
         with:
           python-version: 3.9
 
-    # - name: deploy into heroku
-    #   uses: akhileshns/heroku-deploy@v3.12.12
-    #   with:
-    #     heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-    #     heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-    #     heroku_email: ${{secrets.HEROKU_USER_EMAIL}}
-    - name: Deploy to Render
-    uses: johnbeynon/render-deploy-action@v0.0.8
-    with:
-      service-id: ${{ secrets.RENDER_SERVICE_ID }} # ID do seu serviço no Render
-      api-key: ${{ secrets.RENDER_API_KEY }}       # Sua chave de API do Render
+      - name: deploy into heroku
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+         #heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+         #heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+         #heroku_email: ${{secrets.HEROKU_USER_EMAIL}}
+          service-id: ${{ secrets.RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.RENDER_API_KEY }}      
